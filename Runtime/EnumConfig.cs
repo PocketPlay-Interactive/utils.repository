@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnumConfig
+namespace Utils.Repository
 {
+    public class EnumConfig
+    {
 
+    }
 }
