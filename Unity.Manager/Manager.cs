@@ -61,6 +61,7 @@ public class Manager : SingletonGlobal<Manager>
 
     private IEnumerator InitializeSDK()
     {
+        yield return null;
 #if FIREBASE
         yield return FirebaseManager.I.InitializeAsync();
         yield return new WaitUntil(() => IsFirebaseInitialized == true);
@@ -121,14 +122,17 @@ public class Manager : SingletonGlobal<Manager>
         _hasInitialized = true;
         CurrentLoadingElapsed = 14.0f;
         OnAdCallbackCompleted?.Invoke();
-
+#if ADMOB && USE_ADMOB
         AdManager.I?.InitializedAllOfAds();
+#endif
     }
 
     private void OnApplicationPause(bool pause)
     {
         RuntimeStorageData.SaveAllData();
+#if ADMOB && USE_ADMOB
         if (!pause) AdManager.I.CheckingOpenAd();
+#endif
     }
 
     private void OnApplicationQuit()
