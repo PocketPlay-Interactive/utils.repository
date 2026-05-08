@@ -1,0 +1,13 @@
+{
+  "name": "utils.repository",
+  "displayName": "Utils.Repository",
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "description": "A large collection of reusable Unity C# utilities: file, audio, pooling, event bus, singleton, extension, resource, log, hash, helper, and more. Designed for modular import via Unity Package Manager (UPM) through Git.",
+  "author": "your-name",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-name/Utils.Repository.git"
+  },
+  "keywords": ["unity", "utils", "audio", "file", "pooling", "event", "singleton", "extension", "resource", "log", "hash", "helper"]
+}
